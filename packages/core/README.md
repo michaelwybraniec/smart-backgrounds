@@ -8,6 +8,7 @@
 - **FeatureManager** - Plugin system with dependency resolution
 - **EventBus** - Event-driven communication between features
 - **PerformanceFeature** - FPS monitoring, adaptive quality, GPU detection
+- **UserBehaviorFeature** - Mouse/scroll/touch tracking with parallax
 - **TypeScript** - Fully typed with strict mode
 - **Tree-shakeable** - Only bundle what you use
 - **Zero dependencies** - Lightweight and fast

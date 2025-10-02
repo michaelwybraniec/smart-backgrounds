@@ -20,3 +20,4 @@ export type {
 
 // Smart Features
 export * from './features/performance/index.js';
+export * from './features/interactions/index.js';
