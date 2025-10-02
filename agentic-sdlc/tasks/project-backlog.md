@@ -30,7 +30,7 @@
   - [x] [Task 1.2: Core Engine (SmartBackground, FeatureManager, EventBus)](planned/task-1-2.md)
   - [x] [Task 1.3: Feature #1 - Performance Intelligence](planned/task-1-3.md)
   - [x] [Task 1.4: Feature #2 - User Behavior Response](planned/task-1-4.md)
-  - [ ] [Task 1.5: Core Utilities & Storage](planned/task-1-5.md) ✅ NEW
+  - [x] [Task 1.5: Core Utilities & Storage](planned/task-1-5.md)
 
 #### Phase 2: Three.js Package & Effects (Months 3-4)
 
