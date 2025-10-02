@@ -36,6 +36,7 @@
         /* Sizing - UNIFORM */
         --label-width: 120px;
         --row-height: 32px;
+        --button-width: 100px;
         --border-radius: 3px;
         --border-radius-lg: 4px;
         
@@ -195,7 +196,7 @@
       }
 
       .utility-demo button {
-        padding: var(--spacing-sm) var(--spacing-xl);
+        padding: 0;
         background: var(--bg-button);
         border: 1px solid rgba(102, 126, 234, 0.5);
         color: var(--color-text);
@@ -203,14 +204,14 @@
         cursor: pointer;
         font-size: var(--font-size-normal);
         font-weight: 500;
-        transition: all var(--transition-fast);
+        transition: background var(--transition-fast);
         white-space: nowrap;
         height: var(--row-height);
+        width: var(--button-width);
       }
 
       .utility-demo button:hover {
         background: var(--bg-button-hover);
-        transform: translateY(-1px);
       }
 
       .utility-demo [data-row] {
