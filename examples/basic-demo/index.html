@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Backgrounds - Basic Demo</title>
     <style>
+      /* ============================================
+         GLOBAL CONFIG - Change Everything From Here
+         ============================================ */
+      :root {
+        /* Colors */
+        --color-bg: #0a0a0a;
+        --color-text: #ffffff;
+        --color-text-dim: #aaaaaa;
+        --color-primary: #667eea;
+        --color-primary-dark: #764ba2;
+        --color-success: #4ade80;
+        --color-border: rgba(255, 255, 255, 0.05);
+        --color-border-bright: rgba(255, 255, 255, 0.1);
+        
+        /* Backgrounds */
+        --bg-card: rgba(255, 255, 255, 0.03);
+        --bg-code: rgba(0, 0, 0, 0.3);
+        --bg-button: rgba(102, 126, 234, 0.25);
+        --bg-button-hover: rgba(102, 126, 234, 0.4);
+        --bg-panel: rgba(255, 255, 255, 0.05);
+        
+        /* Spacing */
+        --spacing-xs: 4px;
+        --spacing-sm: 8px;
+        --spacing-md: 12px;
+        --spacing-lg: 16px;
+        --spacing-xl: 20px;
+        
+        /* Sizing */
+        --label-width: 140px;
+        --border-radius: 4px;
+        --border-radius-lg: 6px;
+        
+        /* Typography */
+        --font-mono: 'Monaco', 'Menlo', 'Courier New', monospace;
+        --font-size-sm: 0.8em;
+        --font-size-normal: 0.85em;
+        --font-size-md: 0.9em;
+        
+        /* Effects */
+        --shadow-color: rgba(102, 126, 234, 0.6);
+        --transition-fast: 0.15s;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -13,8 +57,8 @@
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background: #0a0a0a;
-        color: #fff;
+        background: var(--color-bg);
+        color: var(--color-text);
         overflow-x: hidden;
       }
 
@@ -63,34 +107,34 @@
       /* Global Metrics Design - Consistent with Utilities */
       .metrics-grid {
         display: grid;
-        gap: 10px;
+        gap: var(--spacing-md);
       }
 
       .metrics-grid > div {
         display: grid;
-        grid-template-columns: 140px 1fr;
-        gap: 12px;
+        grid-template-columns: var(--label-width) 1fr;
+        gap: var(--spacing-md);
         align-items: center;
-        padding: 10px 12px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: var(--spacing-md);
+        background: var(--bg-card);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-border);
       }
 
       .metrics-grid span:first-child {
-        font-size: 0.85em;
+        font-size: var(--font-size-normal);
         opacity: 0.7;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: var(--spacing-sm);
       }
 
       .metrics-grid code {
         padding: 6px 10px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-        font-family: 'Monaco', monospace;
-        font-size: 0.85em;
+        background: var(--bg-code);
+        border-radius: var(--border-radius);
+        font-family: var(--font-mono);
+        font-size: var(--font-size-normal);
         font-weight: 600;
         text-align: right;
       }
@@ -98,71 +142,71 @@
       /* Utility Demo - Efficient Space Usage */
       .utility-demo {
         display: grid;
-        gap: 16px;
+        gap: var(--spacing-lg);
       }
 
       .utility-demo section {
         display: grid;
-        grid-template-columns: 140px 1fr auto;
-        gap: 12px;
+        grid-template-columns: var(--label-width) 1fr auto;
+        gap: var(--spacing-md);
         align-items: center;
-        padding: 12px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: var(--spacing-md);
+        background: var(--bg-card);
+        border-radius: var(--border-radius-lg);
+        border: 1px solid var(--color-border);
       }
 
       .utility-demo header {
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: var(--spacing-xs);
       }
 
       .utility-demo header span {
-        font-size: 0.85em;
+        font-size: var(--font-size-normal);
         opacity: 0.7;
       }
 
       .utility-demo label {
-        color: #667eea;
+        color: var(--color-primary);
         background: rgba(102, 126, 234, 0.15);
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-family: monospace;
-        font-size: 0.8em;
+        padding: 3px var(--spacing-sm);
+        border-radius: var(--border-radius);
+        font-family: var(--font-mono);
+        font-size: var(--font-size-sm);
         width: fit-content;
       }
 
       .utility-demo code {
-        padding: 8px 12px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-        font-family: 'Monaco', monospace;
-        font-size: 0.85em;
+        padding: var(--spacing-sm) var(--spacing-md);
+        background: var(--bg-code);
+        border-radius: var(--border-radius);
+        font-family: var(--font-mono);
+        font-size: var(--font-size-normal);
         flex: 1;
       }
 
       .utility-demo button {
-        padding: 6px 16px;
-        background: rgba(102, 126, 234, 0.25);
+        padding: 6px var(--spacing-lg);
+        background: var(--bg-button);
         border: 1px solid rgba(102, 126, 234, 0.5);
-        color: white;
-        border-radius: 4px;
+        color: var(--color-text);
+        border-radius: var(--border-radius);
         cursor: pointer;
-        font-size: 0.85em;
+        font-size: var(--font-size-normal);
         font-weight: 500;
-        transition: all 0.15s;
+        transition: all var(--transition-fast);
         white-space: nowrap;
       }
 
       .utility-demo button:hover {
-        background: rgba(102, 126, 234, 0.4);
+        background: var(--bg-button-hover);
         transform: translateY(-1px);
       }
 
       .utility-demo [data-row] {
         display: flex;
-        gap: 12px;
+        gap: var(--spacing-md);
         align-items: center;
         flex: 1;
       }
@@ -170,28 +214,28 @@
       .utility-demo [data-swatch] {
         width: 40px;
         height: 40px;
-        border-radius: 6px;
+        border-radius: var(--border-radius-lg);
         border: 2px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       }
 
       .utility-demo [data-track] {
         flex: 1;
-        height: 12px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 6px;
+        height: var(--spacing-md);
+        background: var(--bg-code);
+        border-radius: var(--border-radius-lg);
         position: relative;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--color-border-bright);
       }
 
       .utility-demo [data-track] > div {
-        width: 12px;
-        height: 12px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        width: var(--spacing-md);
+        height: var(--spacing-md);
+        background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
         border-radius: 50%;
         position: absolute;
         top: 0;
-        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.8);
+        box-shadow: 0 2px 8px var(--shadow-color);
       }
 
       .instructions {
