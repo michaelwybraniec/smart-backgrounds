@@ -1,29 +1,96 @@
 # Smart Backgrounds
 
-> A modular library of stunning, interactive, and intelligent backgrounds for websites
+> A modular library of stunning, interactive, and **intelligent** backgrounds for websites
+>
+> Featuring 29+ smart features including performance intelligence, user behavior response, and revolutionary capabilities
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
 [![pnpm](https://img.shields.io/badge/pnpm-8.15-orange)](https://pnpm.io/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-## 🎯 Vision
+## ✨ Features
 
-Create a library featuring **29+ smart features** including performance intelligence, user behavior response, context awareness, accessibility, audio reactivity, sensor integration, ML/adaptive features, and revolutionary capabilities like quantum randomness and meta-awareness.
+### 🧠 Smart & Adaptive
 
-## 🚀 Current Status
+- **Performance Intelligence** - Auto-detects device capabilities, maintains 60 FPS with adaptive quality
+- **User Behavior Response** - Mouse, scroll, and touch tracking with parallax effects
+- **Context Awareness** - Responds to time of day, theme, and user preferences _(coming soon)_
+- **Battery Awareness** - Reduces performance on low battery automatically
 
-**Phase 1: Foundation & Core Package** - In Progress
+### 🎨 Multiple Renderers
 
-### ✅ Completed Tasks
+- **Three.js** - 3D effects with WebGL 2.0 and GLSL shaders _(coming soon)_
+- **Canvas** - 2D effects with OffscreenCanvas optimization _(coming soon)_
+- **CSS** - Pure CSS animations for lightweight backgrounds _(coming soon)_
 
-- **Task 1.1**: Monorepo Setup (pnpm + Turborepo + TypeScript) ✅
-- **Task 1.2**: Core Engine (SmartBackground, FeatureManager, EventBus) ✅
-- **Task 1.3**: Feature #1 - Performance Intelligence ✅
-- **Task 1.4**: Feature #2 - User Behavior Response ✅
+### 🚀 Developer Experience
 
-### 🔄 In Progress
+- **Simple API** - One import, one line of code to use
+- **Framework Agnostic** - Works with React, Vue, or vanilla JS
+- **TypeScript First** - Fully typed with strict mode
+- **Tree-shakeable** - Only bundle what you need
+- **Zero Dependencies** - Lightweight core (18KB gzipped)
 
-- **Task 1.5**: Core Utilities & Storage
+### ♿ Accessible & Privacy-First
+
+- **WCAG Compliant** - Respects `prefers-reduced-motion` and color schemes
+- **No Tracking** - Privacy-first, GDPR compliant, local-first processing
+- **Mobile Optimized** - Touch gestures and adaptive performance
+
+## 🚀 Quick Start
+
+```bash
+# Install
+pnpm add @smart-backgrounds/core
+
+# Or with npm
+npm install @smart-backgrounds/core
+```
+
+```typescript
+import { SmartBackground, PerformanceFeature, UserBehaviorFeature } from '@smart-backgrounds/core';
+
+// Create instance
+const bg = new SmartBackground();
+
+// Add smart features
+bg.getFeatureManager().register(
+  new PerformanceFeature({
+    targetFPS: 60,
+    adaptiveQuality: true,
+    batteryAware: true,
+  })
+);
+
+bg.getFeatureManager().register(
+  new UserBehaviorFeature({
+    mouse: { parallax: true },
+    scroll: { smooth: true },
+    touch: { gestures: ['swipe', 'pinch'] },
+  })
+);
+
+// Mount to DOM
+await bg.mount('#background');
+
+// Listen to events
+bg.getEventBus().on('performance:metrics', (metrics) => {
+  console.log(`FPS: ${metrics.fps}`);
+});
+```
+
+## 📊 Project Status
+
+**Phase 1: Foundation & Core Package** - In Progress (80% complete)
+
+| Component                | Status         | Description                                     |
+| ------------------------ | -------------- | ----------------------------------------------- |
+| Core Engine              | ✅ Complete    | Plugin system, event bus, feature manager       |
+| Performance Intelligence | ✅ Complete    | FPS monitoring, adaptive quality, GPU detection |
+| User Behavior            | ✅ Complete    | Mouse/scroll/touch tracking, parallax           |
+| Core Utilities           | 🔄 In Progress | Storage, color extraction, device detection     |
+| Three.js Renderer        | 📋 Planned     | 3D effects and particle systems                 |
 
 ## 📦 Monorepo Structure
 
@@ -53,61 +120,158 @@ smart-backgrounds/
 - **Testing**: Vitest, Playwright
 - **Documentation**: VitePress or Docusaurus
 
-## 🎯 Goals
+## 🏗️ Architecture
 
-1. **Performance-first**: Maintain 60 FPS target with adaptive quality
-2. **Simple API**: One import, one line of code to use
-3. **Accessibility**: Full WCAG compliance, respect `prefers-reduced-motion`
-4. **Minimal bundle**: Core + Three.js renderer under 60KB gzipped
-5. **Mobile-first**: Optimized for touch interactions
-6. **Tree-shakeable**: Users only bundle what they need
-7. **Privacy-compliant**: GDPR compliant, no tracking, local-first
-8. **Cross-browser**: Chrome 90+, Firefox 88+, Safari 15+, Edge 90+
+```
+┌─────────────────────────────────────────────────────────┐
+│                   SmartBackground                        │
+│                    (API Facade)                          │
+└─────────────────────────────────────────────────────────┘
+                            │
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+┌───────▼────────┐  ┌──────▼────────┐  ┌──────▼────────┐
+│ FeatureManager │  │   EventBus    │  │   Renderer    │
+│ (Plugins)      │  │  (Pub/Sub)    │  │  (Three.js)   │
+└───────┬────────┘  └───────────────┘  └───────────────┘
+        │
+   ┌────┴─────┬─────────────┬──────────────┐
+   │          │             │              │
+┌──▼───┐  ┌──▼───┐  ┌─────▼─────┐  ┌────▼─────┐
+│ Perf │  │ User │  │  Context  │  │  Audio   │
+│      │  │Behavior│ │ Awareness │  │Reactivity│
+└──────┘  └──────┘  └───────────┘  └──────────┘
+```
 
-## 🏗️ Development Setup
+### Core Concepts
+
+- **Plugin Architecture** - All features are plugins that register with FeatureManager
+- **Event-Driven** - Loose coupling via EventBus for feature communication
+- **Lazy Loading** - Features load on-demand for optimal bundle size
+- **Dependency Resolution** - Automatic handling of feature dependencies
+
+## 💻 Development
 
 ### Prerequisites
 
 - Node.js 18+
 - pnpm 8+
 
-### Installation
+### Setup
 
 ```bash
-# Install dependencies (coming soon)
+# Clone repository
+git clone https://github.com/yourusername/smart-backgrounds.git
+cd smart-backgrounds
+
+# Install dependencies
 pnpm install
 
-# Build all packages (coming soon)
+# Build all packages
 pnpm build
 
-# Run development mode (coming soon)
+# Run development mode
 pnpm dev
 
-# Run tests (coming soon)
+# Run tests
 pnpm test
 
-# Lint code (coming soon)
+# Lint code
 pnpm lint
 
-# Format code (coming soon)
+# Format code
 pnpm format
 ```
 
+### Running Examples
+
+```bash
+# Build core package
+cd packages/core
+pnpm build
+
+# Run basic demo
+cd ../../examples/basic-demo
+pnpm install
+pnpm dev
+```
+
+Then open http://localhost:5173
+
 ## 📚 Documentation
 
-Full documentation is coming soon. For now, see:
+### Core Packages
 
-- [Project Backlog](agentic-sdlc/tasks/project-backlog.md)
-- [Agentic Workflow Protocol](agentic-sdlc/AWP.md)
+- [`@smart-backgrounds/core`](packages/core/README.md) - Core engine with plugin system
+- `@smart-backgrounds/three` - Three.js renderer _(coming soon)_
+- `@smart-backgrounds/canvas` - Canvas renderer _(coming soon)_
+- `@smart-backgrounds/react` - React bindings _(coming soon)_
+- `@smart-backgrounds/vue` - Vue bindings _(coming soon)_
+
+### Examples
+
+- [Basic Demo](examples/basic-demo) - Test performance and interaction features
+- More examples coming soon...
+
+### Resources
+
+- [Project Backlog](agentic-sdlc/tasks/project-backlog.md) - Detailed task breakdown
+- [Agentic Workflow Protocol](agentic-sdlc/AWP.md) - Development methodology
+- API Documentation _(coming soon)_
+
+## 🎯 Roadmap
+
+### Phase 1: Foundation (Months 1-2) - 80% Complete ✅
+
+- [x] Monorepo setup with pnpm + Turborepo
+- [x] Core engine with plugin system
+- [x] Performance intelligence feature
+- [x] User behavior response feature
+- [ ] Core utilities & storage
+
+### Phase 2: Three.js Renderer (Months 3-4)
+
+- [ ] Three.js package setup
+- [ ] Particle effects
+- [ ] Cosmic effects (black hole physics)
+- [ ] Fluid & geometric effects
+
+### Phase 3: Audio & Sensors (Months 5-6)
+
+- [ ] Audio reactivity system
+- [ ] Sensor integration APIs
+- [ ] Audio → Three.js adapter
+
+### Phase 4: Context & Accessibility (Months 7-8)
+
+- [ ] Context awareness (time, theme)
+- [ ] Full WCAG accessibility
+- [ ] Color extraction system
+
+[See full roadmap](agentic-sdlc/tasks/project-backlog.md)
 
 ## 🤝 Contributing
 
-This project follows the **Agentic Workflow Protocol (AWP)** for systematic, transparent development. See [AWP.md](agentic-sdlc/AWP.md) for collaboration guidelines.
+We welcome contributions! This project follows the **Agentic Workflow Protocol (AWP)** for systematic development.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+See [AWP.md](agentic-sdlc/AWP.md) for detailed collaboration guidelines.
 
 ## 📄 License
 
-MIT © Michael Wybraniec ([ONE-FRONT.COM](https://one-front.com), [OVERVIBING.COM](https://overvibing.com))
+MIT © Michael Wybraniec
+
+**Made with ❤️ by [ONE-FRONT.COM](https://one-front.com) | [OVERVIBING.COM](https://overvibing.com)**
+
+## ⭐ Show Your Support
+
+If you find this project useful, please consider giving it a star on GitHub!
 
 ---
 
-**Status**: Foundation Phase | **Next**: Core Utilities & Storage
+**Current Phase**: Foundation (80% complete) | **Next**: Core Utilities & Storage
