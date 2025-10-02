@@ -154,12 +154,12 @@ function initializeUI() {
 }
 
 /**
- * Demonstrate core utilities visually
+ * Demonstrate core utilities with user control
  */
 function initializeUtilityDemos() {
   logger.group('Core Utilities Demo');
 
-  // 1. Vector Math Demo
+  // 1. Vector Math Demo - Updates on mouse move (reactive, not chaotic)
   const vectorDemo = () => {
     const mousePos = userBehaviorFeature.getMousePosition();
     if (mousePos) {
@@ -169,86 +169,112 @@ function initializeUtilityDemos() {
       const angle = Vector2.angle(v1, v2);
 
       document.getElementById('vector-demo').textContent =
-        `Distance: ${distance.toFixed(0)}px, Angle: ${((angle * 180) / Math.PI).toFixed(0)}°`;
+        `Distance: ${distance.toFixed(0)}px | Angle: ${((angle * 180) / Math.PI).toFixed(0)}°`;
     }
   };
   setInterval(vectorDemo, 100);
   logger.debug('Vector demo initialized');
 
-  // 2. Color Utilities Demo - Cycle through colors
-  const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe', '#43e97b'];
+  // 2. Color Utilities Demo - USER CONTROLLED
+  const colors = [
+    { hex: '#667eea', name: 'Purple' },
+    { hex: '#764ba2', name: 'Violet' },
+    { hex: '#f093fb', name: 'Pink' },
+    { hex: '#4facfe', name: 'Blue' },
+    { hex: '#43e97b', name: 'Green' },
+  ];
   let colorIndex = 0;
 
-  const colorDemo = () => {
-    const color = Color.fromHex(colors[colorIndex]);
+  window.testColorUtils = () => {
+    const colorData = colors[colorIndex];
+    const color = Color.fromHex(colorData.hex);
     const hsl = color.toHSL();
 
-    // Animate color change
-    const lighter = color.lighten(20);
-    document.getElementById('color-demo').style.background =
-      `linear-gradient(90deg, ${color.toRgb()}, ${lighter.toRgb()})`;
-    document.getElementById('color-text').textContent = `HSL(${hsl.h}°, ${hsl.s}%, ${hsl.l}%)`;
+    // Show color conversion
+    document.getElementById('color-demo').style.background = color.toRgb();
+    document.getElementById('color-name').textContent = colorData.hex;
+    document.getElementById('color-text').textContent =
+      `HSL(${hsl.h}°, ${hsl.s}%, ${hsl.l}%) | RGB(${Math.round(color.r)}, ${Math.round(color.g)}, ${Math.round(color.b)})`;
 
+    logger.info(`Color converted: ${colorData.hex} → ${color.toHslString()}`);
     colorIndex = (colorIndex + 1) % colors.length;
   };
-  colorDemo();
-  setInterval(colorDemo, 2000);
-  logger.debug('Color demo initialized');
+  // Initialize with first color
+  window.testColorUtils();
+  logger.debug('Color demo initialized (click to test)');
 
-  // 3. Easing Functions Demo - Animated ball
+  // 3. Easing Functions Demo - USER CONTROLLED with clear indication
   const easingFunctions = [
     { name: 'easeInOutQuad', fn: easeInOutQuad },
     { name: 'easeOutElastic', fn: easeOutElastic },
     { name: 'easeOutBounce', fn: easeOutBounce },
   ];
   let easingIndex = 0;
-  let animationStart = 0;
-  const animationDuration = 2000;
+  let isAnimating = false;
 
-  const animateEasing = (timestamp) => {
-    if (!animationStart) animationStart = timestamp;
-    const elapsed = timestamp - animationStart;
-    const progress = Math.min(elapsed / animationDuration, 1);
+  window.testEasing = () => {
+    if (isAnimating) return; // Prevent overlapping animations
 
+    isAnimating = true;
     const currentEasing = easingFunctions[easingIndex];
-    const easedProgress = currentEasing.fn(progress);
-    const position = lerp(0, 190, easedProgress); // 190px = 200px container - 10px ball
+    document.getElementById('easing-name').textContent = currentEasing.name;
+    logger.info(`Testing easing: ${currentEasing.name}`);
 
-    document.getElementById('easing-demo').style.left = `${position}px`;
+    const duration = 1500;
+    const startTime = performance.now();
 
-    if (progress < 1) {
-      requestAnimationFrame(animateEasing);
-    } else {
-      // Reset and switch to next easing function
-      setTimeout(() => {
-        animationStart = 0;
-        easingIndex = (easingIndex + 1) % easingFunctions.length;
-        logger.debug(`Easing: ${easingFunctions[easingIndex].name}`);
-        requestAnimationFrame(animateEasing);
-      }, 500);
-    }
+    const animate = (timestamp) => {
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      const easedProgress = currentEasing.fn(progress);
+      const position = lerp(0, 190, easedProgress);
+
+      document.getElementById('easing-demo').style.left = `${position}px`;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        // Animation complete - reset to start
+        setTimeout(() => {
+          document.getElementById('easing-demo').style.left = '0px';
+          isAnimating = false;
+          easingIndex = (easingIndex + 1) % easingFunctions.length;
+        }, 300);
+      }
+    };
+    requestAnimationFrame(animate);
   };
-  requestAnimationFrame(animateEasing);
-  logger.debug('Easing demo initialized');
+  logger.debug('Easing demo initialized (click to test)');
 
-  // 4. LocalStorage Demo
+  // 4. LocalStorage Demo - USER CONTROLLED
   const storage = new LocalStorage('demo-');
-  const storageDemo = () => {
-    // Store demo data
-    const visitCount = (storage.get('visits') || 0) + 1;
-    storage.set('visits', visitCount);
-    storage.set('lastVisit', new Date().toISOString());
 
+  const updateStorageDisplay = () => {
+    const visits = storage.get('visits') || 0;
+    const lastVisit = storage.get('lastVisit');
     const size = storage.getSize();
+
+    const lastVisitText = lastVisit ? new Date(lastVisit).toLocaleTimeString() : 'Never';
+
     document.getElementById('storage-demo').textContent =
-      `Visits: ${visitCount}, Size: ${size} bytes`;
+      `Visits: ${visits} | Last: ${lastVisitText} | Size: ${size}B`;
   };
-  storageDemo();
-  setInterval(storageDemo, 5000);
-  logger.debug('Storage demo initialized');
+
+  window.testStorage = () => {
+    const visits = (storage.get('visits') || 0) + 1;
+    storage.set('visits', visits);
+    storage.set('lastVisit', new Date().toISOString());
+    logger.info(`LocalStorage updated: visit #${visits}`);
+    updateStorageDisplay();
+  };
+
+  // Initial display
+  updateStorageDisplay();
+  logger.debug('Storage demo initialized (click to test)');
 
   logger.groupEnd();
-  logger.info('All utility demos running!');
+  logger.info('✅ All utility demos ready! Click buttons to test.');
 }
 
 // Cleanup on page unload
