@@ -202,44 +202,61 @@
       <div class="info-panel">
         <h2>🛠️ Core Utilities Demo</h2>
         
-        <div class="metric">
-          <span class="metric-label">🧮 Vector Math</span>
-          <span class="metric-value" id="vector-demo">Move mouse to test</span>
+        <!-- Vector Math Demo -->
+        <div class="utility-demo-item">
+          <div class="utility-header">
+            <span class="utility-label">🧮 Vector Math</span>
+          </div>
+          <div class="utility-display" id="vector-demo">
+            Move mouse to test
+          </div>
+          <div class="demo-hint">Real-time calculation: distance & angle from center</div>
         </div>
         
-        <div class="metric">
-          <span class="metric-label">🎨 Color: <span id="color-name" style="font-family: monospace;">#667eea</span></span>
-          <span class="metric-value">
-            <div style="display: flex; gap: 8px; align-items: center; margin-top: 8px;">
-              <div id="color-demo" style="width: 60px; height: 30px; border-radius: 4px; background: #667eea;"></div>
-              <button onclick="window.testColorUtils()" style="padding: 4px 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; border-radius: 4px; cursor: pointer;">
-                Next Color
-              </button>
-            </div>
-            <div id="color-text" style="margin-top: 4px; font-size: 0.9em; opacity: 0.8;">Click to cycle colors</div>
-          </span>
-        </div>
-        
-        <div class="metric">
-          <span class="metric-label">📊 Easing: <span id="easing-name" style="font-family: monospace;">easeInOutQuad</span></span>
-          <span class="metric-value">
-            <div style="width: 200px; height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; position: relative; margin-top: 8px;">
-              <div id="easing-demo" style="width: 10px; height: 10px; background: #667eea; border-radius: 50%; position: absolute; left: 0; transition: none;"></div>
-            </div>
-            <button onclick="window.testEasing()" style="padding: 4px 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; border-radius: 4px; cursor: pointer; margin-top: 8px;">
-              Animate
+        <!-- Color Utilities Demo -->
+        <div class="utility-demo-item">
+          <div class="utility-header">
+            <span class="utility-label">🎨 Color Utilities</span>
+            <span class="utility-name" id="color-name">#667eea</span>
+          </div>
+          <div class="color-preview">
+            <div class="color-swatch" id="color-demo"></div>
+            <button class="demo-button" onclick="window.testColorUtils()">
+              Next Color
             </button>
-          </span>
+          </div>
+          <div class="utility-display" id="color-text">
+            Click to convert HEX → RGB → HSL
+          </div>
         </div>
         
-        <div class="metric">
-          <span class="metric-label">💾 LocalStorage</span>
-          <span class="metric-value">
-            <div id="storage-demo" style="margin-bottom: 8px;">Loading...</div>
-            <button onclick="window.testStorage()" style="padding: 4px 12px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; border-radius: 4px; cursor: pointer;">
-              Save Data
-            </button>
-          </span>
+        <!-- Easing Functions Demo -->
+        <div class="utility-demo-item">
+          <div class="utility-header">
+            <span class="utility-label">📊 Easing Functions</span>
+            <span class="utility-name" id="easing-name">easeInOutQuad</span>
+          </div>
+          <div class="easing-track">
+            <div class="easing-ball" id="easing-demo"></div>
+          </div>
+          <button class="demo-button" onclick="window.testEasing()">
+            Animate
+          </button>
+          <div class="demo-hint">Watch how different easing functions affect motion</div>
+        </div>
+        
+        <!-- LocalStorage Demo -->
+        <div class="utility-demo-item">
+          <div class="utility-header">
+            <span class="utility-label">💾 LocalStorage</span>
+          </div>
+          <div class="utility-display" id="storage-demo">
+            Loading...
+          </div>
+          <button class="demo-button" onclick="window.testStorage()">
+            Save Data
+          </button>
+          <div class="demo-hint">Persistent storage across page refreshes</div>
         </div>
       </div>
 
