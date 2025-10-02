@@ -33,12 +33,16 @@
         --spacing-lg: 8px;
         --spacing-xl: 12px;
         
-        /* Sizing - UNIFORM */
+        /* Sizing - UNIFORM & ACCESSIBLE */
         --label-width: 120px;
-        --row-height: 32px;
+        --row-height: 44px;        /* WCAG 2.1 AA: 44px minimum touch target */
         --button-width: 100px;
         --border-radius: 3px;
         --border-radius-lg: 4px;
+        
+        /* Accessibility */
+        --focus-color: #667eea;
+        --focus-width: 3px;
         
         /* Typography - COMPACT */
         --font-mono: 'Monaco', 'Menlo', 'Courier New', monospace;
@@ -62,6 +66,29 @@
         background: var(--color-bg);
         color: var(--color-text);
         overflow-x: hidden;
+        line-height: 1.5;  /* WCAG: Minimum line height for readability */
+      }
+
+      /* Accessibility: Focus visible for all interactive elements */
+      *:focus-visible {
+        outline: var(--focus-width) solid var(--focus-color);
+        outline-offset: 2px;
+      }
+
+      /* Accessibility: Skip to main content link */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--color-primary);
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 100;
+      }
+
+      .skip-link:focus {
+        top: 0;
       }
 
       #background {
@@ -141,7 +168,7 @@
         font-size: var(--font-size-normal);
         font-weight: 600;
         text-align: right;
-        line-height: 1.4;
+        line-height: 1.6;  /* WCAG: Better readability */
       }
 
       /* Utility Demo - Efficient Space Usage */
@@ -192,7 +219,7 @@
         font-family: var(--font-mono);
         font-size: var(--font-size-normal);
         flex: 1;
-        line-height: 1.4;
+        line-height: 1.6;  /* WCAG: Better readability */
       }
 
       .utility-demo button {
@@ -212,6 +239,11 @@
 
       .utility-demo button:hover {
         background: var(--bg-button-hover);
+      }
+
+      .utility-demo button:focus-visible {
+        outline: var(--focus-width) solid var(--focus-color);
+        outline-offset: 2px;
       }
 
       .utility-demo [data-row] {
@@ -301,9 +333,10 @@
     </style>
   </head>
   <body>
-    <div id="background"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="background" role="presentation" aria-hidden="true"></div>
 
-    <div class="content">
+    <div class="content" id="main-content" role="main">
       <h1>🎨 Smart Backgrounds Demo</h1>
       <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #ccc">
         Testing Performance Intelligence & User Behavior Response
@@ -388,10 +421,10 @@
               <label id="color-name">#667eea</label>
             </header>
             <div data-row>
-              <div data-swatch id="color-demo"></div>
+              <div data-swatch id="color-demo" role="img" aria-label="Color preview swatch"></div>
               <code id="color-text">HEX → RGB → HSL</code>
             </div>
-            <button onclick="window.testColorUtils()">Next Color</button>
+            <button onclick="window.testColorUtils()" aria-label="Cycle to next color">Next Color</button>
           </section>
           
           <section>
@@ -399,10 +432,10 @@
               <span>📊 Easing</span>
               <label id="easing-name">easeInOutQuad</label>
             </header>
-            <div data-track>
+            <div data-track role="img" aria-label="Animation track showing easing function">
               <div id="easing-demo"></div>
             </div>
-            <button onclick="window.testEasing()">Animate</button>
+            <button onclick="window.testEasing()" aria-label="Play easing animation">Animate</button>
           </section>
           
           <section>
@@ -410,7 +443,7 @@
               <span>💾 Storage</span>
             </header>
             <code id="storage-demo">Loading...</code>
-            <button onclick="window.testStorage()">Save Data</button>
+            <button onclick="window.testStorage()" aria-label="Save data to local storage">Save Data</button>
           </section>
         </div>
       </div>
