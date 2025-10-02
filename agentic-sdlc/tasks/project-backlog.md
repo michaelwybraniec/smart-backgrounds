@@ -15,7 +15,7 @@
 **Performance:** 60 FPS target with adaptive quality  
 **Timeline:** 31+ months (16 phases)  
 **Total Features:** 29 smart features  
-**Total Files:** ~228 files, ~38,000 lines of code  
+**Total Files:** ~228 files, ~38,000 lines of code
 
 ---
 
@@ -24,79 +24,95 @@
 ### ✅ Planned Tasks
 
 #### Phase 1: Foundation & Core Package (Months 1-2)
+
 - [ ] [Task 1: Phase 1 - Foundation & Core Package Setup](planned/task-1.md)
   - [x] [Task 1.1: Monorepo Setup (pnpm + Turborepo + TypeScript)](planned/task-1-1.md)
-  - [ ] [Task 1.2: Core Engine (SmartBackground, FeatureManager, EventBus)](planned/task-1-2.md)
+  - [x] [Task 1.2: Core Engine (SmartBackground, FeatureManager, EventBus)](planned/task-1-2.md)
   - [ ] [Task 1.3: Feature #1 - Performance Intelligence](planned/task-1-3.md)
   - [ ] [Task 1.4: Feature #2 - User Behavior Response](planned/task-1-4.md) ✅ NEW
   - [ ] [Task 1.5: Core Utilities & Storage](planned/task-1-5.md) ✅ NEW
 
 #### Phase 2: Three.js Package & Effects (Months 3-4)
+
 - [ ] [Task 2: Phase 2 - Three.js Package & Effects](planned/task-2.md)
-  - [ ] Task 2.1: Three.js Package Setup *(to be created)*
-  - [ ] Task 2.2: Particle Effects *(to be created)*
-  - [ ] Task 2.3: Cosmic Effects (#29 Black Hole Physics) *(to be created)*
-  - [ ] Task 2.4: Fluid & Geometric Effects *(to be created)*
-  - [ ] Task 2.5: GLSL Shaders *(to be created)*
-  - [ ] Task 2.6: Three.js Adapters *(to be created)*
+  - [ ] Task 2.1: Three.js Package Setup _(to be created)_
+  - [ ] Task 2.2: Particle Effects _(to be created)_
+  - [ ] Task 2.3: Cosmic Effects (#29 Black Hole Physics) _(to be created)_
+  - [ ] Task 2.4: Fluid & Geometric Effects _(to be created)_
+  - [ ] Task 2.5: GLSL Shaders _(to be created)_
+  - [ ] Task 2.6: Three.js Adapters _(to be created)_
 
 #### Phase 3: Audio Reactivity & Sensors (Months 5-6)
+
 - [ ] [Task 3: Phase 3 - Audio Reactivity & Sensor Integration](planned/task-3.md)
-  - [ ] Task 3.1: Audio Reactivity System *(to be created)*
-  - [ ] Task 3.2: Sensor Integration APIs *(to be created)*
-  - [ ] Task 3.3: Audio → Three.js Adapter *(to be created)*
-  - [ ] Task 3.4: Sensor → Three.js Adapter *(to be created)*
+  - [ ] Task 3.1: Audio Reactivity System _(to be created)_
+  - [ ] Task 3.2: Sensor Integration APIs _(to be created)_
+  - [ ] Task 3.3: Audio → Three.js Adapter _(to be created)_
+  - [ ] Task 3.4: Sensor → Three.js Adapter _(to be created)_
 
 #### Phase 4: Context Awareness & Accessibility (Months 7-8)
+
 - [ ] [Task 4: Phase 4 - Context Awareness & Accessibility](planned/task-4.md) ✅ NEW
 
 #### Phase 5: Canvas & CSS Packages (Months 9-10)
+
 - [ ] [Task 5: Phase 5 - Canvas & CSS Packages](planned/task-5.md) ✅ NEW
 
 #### Phase 6: Physics Package (Months 11-12)
+
 - [ ] [Task 6: Phase 6 - Physics Package](planned/task-6.md) ✅ NEW
 
 #### Phase 7: ML/AI Features (Months 13-15)
+
 - [ ] [Task 7: Phase 7 - ML/AI Features](planned/task-7.md) ✅ NEW
 
 #### Phase 8: Collaborative & Revolutionary Features (Months 16-18)
+
 - [ ] [Task 8: Phase 8 - Collaborative & Revolutionary Features](planned/task-8.md) ✅ NEW
 
 #### Phase 9: Therapeutic, Privacy & Advanced Features (Months 19-21)
+
 - [ ] [Task 9: Phase 9 - Therapeutic, Privacy & Advanced Features](planned/task-9.md) ✅ NEW
 
 #### Phase 10: Revolutionary Features (Months 22-24)
+
 - [ ] [Task 10: Phase 10 - Revolutionary Features (Quantum, Synaesthesia, Meta-Awareness)](planned/task-10.md)
 
 #### Phase 11: Framework Integrations (Months 25-26)
+
 - [ ] [Task 11: Phase 11 - Framework Integrations (React, Vue)](planned/task-11.md) ✅ NEW
 
 #### Phase 12: Documentation & Showcase (Months 27-28)
+
 - [ ] [Task 12: Phase 12 - Documentation & Showcase](planned/task-12.md) ✅ NEW
 
 #### Phase 13: Testing & Quality Assurance (Months 29-30)
+
 - [ ] [Task 13: Phase 13 - Testing & Quality Assurance](planned/task-13.md) ✅ NEW
 
 #### Phase 14: Build, CI/CD & Release (Month 31)
+
 - [ ] [Task 14: Phase 14 - Build, CI/CD & Release](planned/task-14.md) ✅ NEW
 
 #### Phase 15: Post-Launch & Maintenance (Ongoing)
+
 - [ ] [Task 15: Phase 15 - Post-Launch & Maintenance](planned/task-15.md) ✅ NEW
 
 #### Phase 16: Future Roadmap (v1.5 - v2.0+)
+
 - [ ] [Task 16: Phase 16 - Future Roadmap](planned/task-16.md) ✅ NEW
 
 ---
 
 ### 🔄 Unplanned Tasks
 
-*No unplanned tasks yet. Use U- prefix for scope expansions (e.g., U-1, U-1.1)*
+_No unplanned tasks yet. Use U- prefix for scope expansions (e.g., U-1, U-1.1)_
 
 ---
 
 ### ✅ Completed Tasks
 
-*No completed tasks yet*
+_No completed tasks yet_
 
 ---
 
@@ -141,69 +157,77 @@
 ✅ Core + Three.js renderer < 60KB gzipped  
 ✅ First render < 100ms  
 ✅ Tree-shakeable architecture  
-✅ Mobile-first optimization  
+✅ Mobile-first optimization
 
 **Accessibility Targets:**
 ✅ Full WCAG 2.1 Level AA compliance  
 ✅ Therapeutic modes (ADHD, Autism, PTSD-safe)  
 ✅ prefers-reduced-motion support  
 ✅ Screen reader compatible  
-✅ Contrast ratio compliance  
+✅ Contrast ratio compliance
 
 **Browser Support Targets:**
 ✅ Chrome 90+  
 ✅ Firefox 88+  
 ✅ Safari 15+  
 ✅ Edge 90+  
-✅ Mobile Chrome/Safari  
+✅ Mobile Chrome/Safari
 
 **Documentation Targets:**
 ✅ Complete API documentation  
 ✅ Interactive playground  
 ✅ 10+ working examples  
 ✅ Video tutorials  
-✅ Migration guides  
+✅ Migration guides
 
 **Community Targets:**
 ✅ Open source (MIT license)  
 ✅ Active GitHub repository  
 ✅ Contributor-friendly documentation  
 ✅ Discord community  
-✅ Regular updates and support  
+✅ Regular updates and support
 
 ---
 
 ## 🛠️ Technology Stack
 
 **Build System:**
+
 - Vite, TypeScript, ESBuild
 - pnpm workspaces + Turborepo
 
 **Rendering & Graphics:**
+
 - Three.js, WebGL 2.0, GLSL shaders
 - Canvas API, OffscreenCanvas
 - Cannon.js or Rapier (physics)
 
 **Smart Features:**
+
 - Web Audio API + Tone.js
 - Generic Sensor API, Battery API
 - TensorFlow.js, MediaPipe
 - WebSocket, WebRTC
 
 **Storage:**
+
 - LocalStorage, IndexedDB (Dexie.js)
 - Zustand or Jotai (state management)
 
 **Framework Integration:**
+
 - React 18+, Vue 3
 
 **Testing:**
+
 - Vitest, Playwright
 
 **Documentation:**
+
 - VitePress or Docusaurus
 
 **External APIs:**
+
 - OpenWeatherMap, NASA APIs, ANU Quantum RNG
 
 ---
@@ -211,6 +235,7 @@
 ## 🎨 Background Types
 
 ### **Three.js Based**
+
 - Animated particle systems (stars, dots, geometric shapes)
 - Wave/fluid animations
 - 3D geometric patterns (rotating cubes, spheres, toruses)
@@ -219,6 +244,7 @@
 - Shader-based effects (noise, distortion)
 
 ### **Canvas/WebGL**
+
 - Matrix rain effect
 - Gradient meshes
 - Custom shader effects
@@ -227,6 +253,7 @@
 - Flow fields
 
 ### **Lightweight CSS/SVG**
+
 - CSS-only animated gradients
 - SVG-based patterns
 - Morphing shapes
@@ -257,16 +284,16 @@ import { ParticleField } from '@smart-backgrounds/three';
 const bg = new SmartBackground({
   effect: ParticleField,
   smart: {
-    performance: 'auto',      // Adjust to device capabilities
+    performance: 'auto', // Adjust to device capabilities
     interactions: ['mouse', 'scroll'],
-    contextAware: true,       // React to time/theme
-    accessibility: true       // Respect user preferences
+    contextAware: true, // React to time/theme
+    accessibility: true, // Respect user preferences
   },
   options: {
-    particleCount: 'auto',   // Smart will determine optimal count
-    color: 'theme',           // Extract from page theme
-    speed: 1.0
-  }
+    particleCount: 'auto', // Smart will determine optimal count
+    color: 'theme', // Extract from page theme
+    speed: 1.0,
+  },
 });
 
 bg.mount('#background');
@@ -277,24 +304,28 @@ bg.mount('#background');
 ## 🎯 Development Phases (Simple Checklist)
 
 ### Phase 1: Foundation
+
 - [ ] Set up monorepo structure
 - [ ] Create core smart utilities
 - [ ] Implement performance monitoring
 - [ ] Build first Three.js effect (particle system)
 
 ### Phase 2: Expansion
+
 - [ ] Add 3-5 more effects per technology
 - [ ] Create React/Vue wrappers
 - [ ] Build documentation site
 - [ ] Add interaction handlers
 
 ### Phase 3: Intelligence
+
 - [ ] Implement context awareness
 - [ ] Add accessibility features
 - [ ] Create adaptive quality system
 - [ ] Build color extraction system
 
 ### Phase 4: Polish
+
 - [ ] Performance optimization
 - [ ] Testing & cross-browser support
 - [ ] Examples & tutorials
@@ -338,7 +369,7 @@ bg.mount('#background');
 
 ## 📂 Complete Project Structure
 
-*(Detailed 600+ line file tree structure included below)*
+_(Detailed 600+ line file tree structure included below)_
 
 ---
 
@@ -515,20 +546,20 @@ smart-backgrounds/
 
 ## 📊 File Count Summary
 
-| Package/Directory | Files | Lines (est.) | Purpose |
-|-------------------|-------|--------------|---------|
-| **core** | ~60 | ~8,000 | Universal features & engine |
-| **three** | ~35 | ~5,000 | 3D effects & shaders |
-| **canvas** | ~20 | ~3,000 | 2D effects & workers |
-| **css** | ~12 | ~1,500 | Pure CSS effects |
-| **physics** | ~15 | ~2,500 | Physics simulations |
-| **react** | ~10 | ~1,200 | React bindings |
-| **vue** | ~8 | ~1,000 | Vue bindings |
-| **examples** | ~13 | ~2,000 | Demo implementations |
-| **docs** | ~20 | ~10,000 | Documentation site |
-| **apps/showcase** | ~25 | ~3,000 | Main showcase app |
-| **tools** | ~10 | ~800 | Build utilities |
-| **Total** | **~228** | **~38,000** | Full project |
+| Package/Directory | Files    | Lines (est.) | Purpose                     |
+| ----------------- | -------- | ------------ | --------------------------- |
+| **core**          | ~60      | ~8,000       | Universal features & engine |
+| **three**         | ~35      | ~5,000       | 3D effects & shaders        |
+| **canvas**        | ~20      | ~3,000       | 2D effects & workers        |
+| **css**           | ~12      | ~1,500       | Pure CSS effects            |
+| **physics**       | ~15      | ~2,500       | Physics simulations         |
+| **react**         | ~10      | ~1,200       | React bindings              |
+| **vue**           | ~8       | ~1,000       | Vue bindings                |
+| **examples**      | ~13      | ~2,000       | Demo implementations        |
+| **docs**          | ~20      | ~10,000      | Documentation site          |
+| **apps/showcase** | ~25      | ~3,000       | Main showcase app           |
+| **tools**         | ~10      | ~800         | Build utilities             |
+| **Total**         | **~228** | **~38,000**  | Full project                |
 
 ---
 
@@ -621,7 +652,7 @@ interface SmartFeaturePlugin {
   name: string;
   priority: number;
   dependencies?: string[];
-  
+
   init(context: FeatureContext): Promise<void>;
   update(deltaTime: number, data: any): void;
   cleanup(): void;
@@ -630,12 +661,12 @@ interface SmartFeaturePlugin {
 // Example: Audio Feature (in core)
 class AudioFeature implements SmartFeaturePlugin {
   name = 'audio';
-  
+
   async init(context) {
     // Set up Web Audio API
     this.analyzer = new AudioAnalyzer();
   }
-  
+
   update(deltaTime) {
     // Emit audio data to event bus
     const data = this.analyzer.getFrequencyData();
@@ -685,32 +716,32 @@ const bg = new SmartBackground({
   // Choose renderer and effect
   renderer: 'three',
   effect: ParticleSystem,
-  
+
   // Enable smart features (from core)
   features: {
     audio: {
       enabled: true,
       reactive: true,
-      source: 'microphone'
+      source: 'microphone',
     },
     sensors: {
       enabled: true,
       useGyroscope: true,
-      useAmbientLight: true
+      useAmbientLight: true,
     },
     performance: {
       enabled: true,
       targetFPS: 60,
-      adaptiveQuality: true
-    }
+      adaptiveQuality: true,
+    },
   },
-  
+
   // Effect-specific options
   options: {
     particleCount: 10000,
     color: 'theme', // Extract from page
-    physics: 'quantum' // Use quantum randomness
-  }
+    physics: 'quantum', // Use quantum randomness
+  },
 });
 
 bg.mount('#background');
@@ -744,6 +775,7 @@ bg.mount('#background');
    - ✅ Framework-agnostic core
 
 This architecture allows users to:
+
 - Use only the features they need (tree-shaking)
 - Mix and match renderers and features
 - Add custom effects easily
@@ -782,7 +814,7 @@ pnpm add @smart-backgrounds/vue
 <script>
   const bg = new SmartBackground({
     renderer: 'three',
-    effect: 'particles'
+    effect: 'particles',
   });
   bg.mount('#background');
 </script>
@@ -800,8 +832,8 @@ const bg = new SmartBackground({
   effect: ParticleSystem,
   options: {
     particleCount: 5000,
-    color: '#00ff88'
-  }
+    color: '#00ff88',
+  },
 });
 
 // Mount to DOM
@@ -822,7 +854,7 @@ function App() {
         effect={ParticleSystem}
         options={{
           particleCount: 5000,
-          color: '#00ff88'
+          color: '#00ff88',
         }}
       />
       <div className="content">
@@ -868,26 +900,26 @@ import { ParticleSystem } from '@smart-backgrounds/three';
 
 ### **Supported Browsers**
 
-| Browser | Version | WebGL 2.0 | Smart Features Support |
-|---------|---------|-----------|------------------------|
-| Chrome | 90+ | ✅ Full | ✅ All features |
-| Firefox | 88+ | ✅ Full | ✅ All features |
-| Safari | 15+ | ✅ Full | ⚠️ Limited sensors |
-| Edge | 90+ | ✅ Full | ✅ All features |
-| Mobile Chrome | 90+ | ✅ Full | ✅ Most features |
-| Mobile Safari | 15+ | ✅ Full | ⚠️ Limited sensors |
+| Browser       | Version | WebGL 2.0 | Smart Features Support |
+| ------------- | ------- | --------- | ---------------------- |
+| Chrome        | 90+     | ✅ Full   | ✅ All features        |
+| Firefox       | 88+     | ✅ Full   | ✅ All features        |
+| Safari        | 15+     | ✅ Full   | ⚠️ Limited sensors     |
+| Edge          | 90+     | ✅ Full   | ✅ All features        |
+| Mobile Chrome | 90+     | ✅ Full   | ✅ Most features       |
+| Mobile Safari | 15+     | ✅ Full   | ⚠️ Limited sensors     |
 
 ### **Feature Support Matrix**
 
-| Feature | Chrome | Firefox | Safari | Edge |
-|---------|--------|---------|--------|------|
-| WebGL 2.0 | ✅ | ✅ | ✅ | ✅ |
-| Web Audio API | ✅ | ✅ | ✅ | ✅ |
-| Device Sensors | ✅ | ✅ | ⚠️ | ✅ |
-| Web Workers | ✅ | ✅ | ✅ | ✅ |
-| WebRTC | ✅ | ✅ | ✅ | ✅ |
-| Battery API | ✅ | ⚠️ | ❌ | ✅ |
-| Ambient Light | ✅ | ⚠️ | ❌ | ✅ |
+| Feature        | Chrome | Firefox | Safari | Edge |
+| -------------- | ------ | ------- | ------ | ---- |
+| WebGL 2.0      | ✅     | ✅      | ✅     | ✅   |
+| Web Audio API  | ✅     | ✅      | ✅     | ✅   |
+| Device Sensors | ✅     | ✅      | ⚠️     | ✅   |
+| Web Workers    | ✅     | ✅      | ✅     | ✅   |
+| WebRTC         | ✅     | ✅      | ✅     | ✅   |
+| Battery API    | ✅     | ⚠️      | ❌     | ✅   |
+| Ambient Light  | ✅     | ⚠️      | ❌     | ✅   |
 
 ### **Progressive Enhancement**
 
@@ -917,21 +949,21 @@ class SmartBackground {
   mount(selector: string | HTMLElement): void;
   unmount(): void;
   destroy(): void;
-  
+
   // Feature control
   enableFeature(name: string, options?: any): void;
   disableFeature(name: string): void;
   getFeature(name: string): SmartFeature;
-  
+
   // State management
   updateOptions(options: Partial<BackgroundOptions>): void;
   getState(): BackgroundState;
-  
+
   // Events
   on(event: string, callback: Function): void;
   off(event: string, callback: Function): void;
   emit(event: string, data?: any): void;
-  
+
   // Static methods
   static isWebGLSupported(): boolean;
   static isMobile(): boolean;
@@ -946,15 +978,15 @@ interface BackgroundOptions {
   // Renderer selection
   renderer: 'three' | 'canvas' | 'css';
   effect: string | EffectClass;
-  
+
   // Smart features configuration
   features?: {
-    performance?: { enabled: boolean; adaptiveQuality: boolean; };
-    audio?: { enabled: boolean; reactive: boolean; };
-    sensors?: { enabled: boolean; useGyroscope: boolean; };
+    performance?: { enabled: boolean; adaptiveQuality: boolean };
+    audio?: { enabled: boolean; reactive: boolean };
+    sensors?: { enabled: boolean; useGyroscope: boolean };
     // ... all 29 features
   };
-  
+
   // Effect-specific options
   options?: {
     particleCount?: number | 'auto';
@@ -962,7 +994,7 @@ interface BackgroundOptions {
     speed?: number;
     // ... effect-specific options
   };
-  
+
   // Container options
   container?: {
     zIndex?: number;
@@ -989,7 +1021,7 @@ interface SmartFeaturePlugin {
   name: string;
   priority: number;
   dependencies?: string[];
-  
+
   init(context: FeatureContext): Promise<void>;
   update(deltaTime: number, data: any): void;
   cleanup(): void;
@@ -1010,12 +1042,14 @@ Full TypeScript definitions included with auto-completion support for all APIs.
 ### **Recommended Device Specifications**
 
 #### **Minimum Specs**
+
 - GPU: Intel HD 4000 or equivalent
 - RAM: 4GB
 - CPU: Dual-core 2.0 GHz
 - Network: 3G+
 
 #### **Recommended Specs**
+
 - GPU: Dedicated GPU (NVIDIA GTX 1050 / AMD RX 560)
 - RAM: 8GB+
 - CPU: Quad-core 2.5 GHz+
@@ -1023,26 +1057,27 @@ Full TypeScript definitions included with auto-completion support for all APIs.
 
 ### **Bundle Size Targets**
 
-| Package | Minified | Gzipped |
-|---------|----------|---------|
-| @smart-backgrounds/core | ~50KB | ~18KB |
-| @smart-backgrounds/three | ~120KB | ~40KB |
-| @smart-backgrounds/canvas | ~30KB | ~12KB |
-| @smart-backgrounds/css | ~10KB | ~4KB |
-| **Total (Core + Three)** | **~170KB** | **~58KB** |
+| Package                   | Minified   | Gzipped   |
+| ------------------------- | ---------- | --------- |
+| @smart-backgrounds/core   | ~50KB      | ~18KB     |
+| @smart-backgrounds/three  | ~120KB     | ~40KB     |
+| @smart-backgrounds/canvas | ~30KB      | ~12KB     |
+| @smart-backgrounds/css    | ~10KB      | ~4KB      |
+| **Total (Core + Three)**  | **~170KB** | **~58KB** |
 
 ### **Performance Benchmarks**
 
-| Effect | Particles | FPS (Desktop) | FPS (Mobile) | GPU Usage |
-|--------|-----------|---------------|--------------|-----------|
-| Basic Particles | 5,000 | 60 | 60 | Low |
-| Audio Reactive | 10,000 | 60 | 50-60 | Medium |
-| Black Hole Physics | Complex | 60 | 40-50 | High |
-| Galaxy | Complex | 60 | 45-55 | High |
+| Effect             | Particles | FPS (Desktop) | FPS (Mobile) | GPU Usage |
+| ------------------ | --------- | ------------- | ------------ | --------- |
+| Basic Particles    | 5,000     | 60            | 60           | Low       |
+| Audio Reactive     | 10,000    | 60            | 50-60        | Medium    |
+| Black Hole Physics | Complex   | 60            | 40-50        | High      |
+| Galaxy             | Complex   | 60            | 45-55        | High      |
 
 ### **Optimization Best Practices**
 
 1. **Enable Adaptive Quality**
+
    ```javascript
    features: {
      performance: {
@@ -1054,20 +1089,22 @@ Full TypeScript definitions included with auto-completion support for all APIs.
    ```
 
 2. **Use Tree-Shaking**
+
    ```javascript
    // Import only what you need
    import { PerformanceMonitor } from '@smart-backgrounds/core/features/performance';
    ```
 
 3. **Lazy Load Heavy Features**
+
    ```javascript
    const bg = new SmartBackground({
      features: {
        audio: { enabled: false }, // Load on demand
-       ml: { enabled: false }
-     }
+       ml: { enabled: false },
+     },
    });
-   
+
    // Enable when needed
    bg.enableFeature('audio');
    ```
@@ -1090,6 +1127,7 @@ Full TypeScript definitions included with auto-completion support for all APIs.
 **We collect NO personal data by default.**
 
 Smart Backgrounds is:
+
 - ✅ Privacy-first
 - ✅ GDPR compliant
 - ✅ No analytics by default
@@ -1126,7 +1164,7 @@ bg.enableFeature('privacy', {
   disableTracking: true,
   disableSensors: true,
   disableCamera: true,
-  disableMicrophone: true
+  disableMicrophone: true,
 });
 
 // Check incognito mode
@@ -1156,18 +1194,24 @@ bg.getFeature('privacy').clearAllData();
 ### **Security Best Practices**
 
 1. **Content Security Policy (CSP)**
+
    ```html
-   <meta http-equiv="Content-Security-Policy" 
-         content="default-src 'self'; 
+   <meta
+     http-equiv="Content-Security-Policy"
+     content="default-src 'self'; 
                   script-src 'self' 'unsafe-eval'; 
-                  worker-src 'self' blob:;">
+                  worker-src 'self' blob:;"
+   />
    ```
 
 2. **Subresource Integrity (SRI)**
+
    ```html
-   <script src="https://unpkg.com/@smart-backgrounds/core" 
-           integrity="sha384-..." 
-           crossorigin="anonymous"></script>
+   <script
+     src="https://unpkg.com/@smart-backgrounds/core"
+     integrity="sha384-..."
+     crossorigin="anonymous"
+   ></script>
    ```
 
 3. **No Inline Scripts**
@@ -1180,74 +1224,85 @@ bg.getFeature('privacy').clearAllData();
 ## 💡 Use Cases & Real-World Examples
 
 ### **1. Landing Pages**
+
 ```javascript
 // Hero section with particles
 SmartBackground({
   effect: 'particles',
   features: {
     interactions: { mouse: true, scroll: true },
-    context: { theme: 'auto' }
-  }
+    context: { theme: 'auto' },
+  },
 });
 ```
+
 **Best for:** SaaS, Product launches, Marketing sites
 
 ### **2. Portfolio Sites**
+
 ```javascript
 // Dynamic background that changes with scroll
 SmartBackground({
   effect: 'gradient-mesh',
   features: {
     context: { colorExtraction: true }, // Extract from portfolio images
-    interactions: { scroll: 'parallax' }
-  }
+    interactions: { scroll: 'parallax' },
+  },
 });
 ```
+
 **Best for:** Designers, Artists, Photographers
 
 ### **3. Music/Audio Visualizers**
+
 ```javascript
 // Audio-reactive particles
 SmartBackground({
   effect: 'audio-particles',
   features: {
-    audio: { 
+    audio: {
       source: 'streaming',
-      visualize: 'frequencies'
+      visualize: 'frequencies',
     },
-    synaesthesia: { enabled: true }
-  }
+    synaesthesia: { enabled: true },
+  },
 });
 ```
+
 **Best for:** Music streaming, Podcasts, Audio apps
 
 ### **4. E-commerce**
+
 ```javascript
 // Subtle, performance-optimized background
 SmartBackground({
   effect: 'minimal-gradient',
   features: {
     performance: { priority: 'high' },
-    content: { formDetection: true } // Calm during checkout
-  }
+    content: { formDetection: true }, // Calm during checkout
+  },
 });
 ```
+
 **Best for:** Online stores, Product pages
 
 ### **5. Gaming Websites**
+
 ```javascript
 // Black hole physics background
 SmartBackground({
   effect: 'black-hole',
   features: {
     gaming: { easterEggs: true, achievements: true },
-    sensors: { gyroscope: true }
-  }
+    sensors: { gyroscope: true },
+  },
 });
 ```
+
 **Best for:** Game studios, Esports, Gaming communities
 
 ### **6. Meditation/Wellness Apps**
+
 ```javascript
 // Therapeutic, calming background
 SmartBackground({
@@ -1255,39 +1310,44 @@ SmartBackground({
   features: {
     wellness: {
       anxietyReduction: true,
-      breathingSync: true
+      breathingSync: true,
     },
     biometric: { heartRate: true },
-    emotional: { stressDetection: true }
-  }
+    emotional: { stressDetection: true },
+  },
 });
 ```
+
 **Best for:** Mental health apps, Meditation, Therapy
 
 ### **7. Educational Platforms**
+
 ```javascript
 // Interactive learning background
 SmartBackground({
   effect: 'neural-network',
   features: {
     content: { readingMode: true },
-    accessibility: { adhd: true, autism: true }
-  }
+    accessibility: { adhd: true, autism: true },
+  },
 });
 ```
+
 **Best for:** Online courses, EdTech, Universities
 
 ### **8. Tech/Startup Blogs**
+
 ```javascript
 // Code-inspired matrix effect
 SmartBackground({
   effect: 'matrix-rain',
   features: {
     context: { timeOfDay: true },
-    content: { readingMode: true }
-  }
+    content: { readingMode: true },
+  },
 });
 ```
+
 **Best for:** Tech blogs, Developer portfolios, Startups
 
 ---
@@ -1296,19 +1356,19 @@ SmartBackground({
 
 ### **Comparison with Existing Libraries**
 
-| Feature | Smart Backgrounds | particles.js | VANTA.js | Three.js |
-|---------|-------------------|--------------|----------|----------|
-| **Easy Setup** | ✅ One line | ✅ Simple | ✅ Simple | ❌ Complex |
-| **Smart Features** | ✅ 29 features | ❌ None | ❌ None | ❌ Manual |
-| **Performance Adaptive** | ✅ Auto | ❌ Manual | ⚠️ Limited | ❌ Manual |
-| **Accessibility** | ✅ Built-in | ❌ None | ❌ None | ❌ Manual |
-| **Audio Reactive** | ✅ Yes | ❌ No | ⚠️ Limited | ❌ Manual |
-| **Cross-Device Sync** | ✅ Yes | ❌ No | ❌ No | ❌ No |
-| **Therapeutic Mode** | ✅ Yes | ❌ No | ❌ No | ❌ No |
-| **Framework Support** | ✅ React/Vue | ⚠️ Wrapper | ⚠️ Wrapper | ⚠️ Wrapper |
-| **Bundle Size** | 58KB (gzip) | 7KB | 45KB | 150KB+ |
-| **TypeScript** | ✅ Full | ⚠️ Types | ⚠️ Types | ✅ Full |
-| **Active Development** | ✅ Yes | ⚠️ Slow | ✅ Yes | ✅ Yes |
+| Feature                  | Smart Backgrounds | particles.js | VANTA.js   | Three.js   |
+| ------------------------ | ----------------- | ------------ | ---------- | ---------- |
+| **Easy Setup**           | ✅ One line       | ✅ Simple    | ✅ Simple  | ❌ Complex |
+| **Smart Features**       | ✅ 29 features    | ❌ None      | ❌ None    | ❌ Manual  |
+| **Performance Adaptive** | ✅ Auto           | ❌ Manual    | ⚠️ Limited | ❌ Manual  |
+| **Accessibility**        | ✅ Built-in       | ❌ None      | ❌ None    | ❌ Manual  |
+| **Audio Reactive**       | ✅ Yes            | ❌ No        | ⚠️ Limited | ❌ Manual  |
+| **Cross-Device Sync**    | ✅ Yes            | ❌ No        | ❌ No      | ❌ No      |
+| **Therapeutic Mode**     | ✅ Yes            | ❌ No        | ❌ No      | ❌ No      |
+| **Framework Support**    | ✅ React/Vue      | ⚠️ Wrapper   | ⚠️ Wrapper | ⚠️ Wrapper |
+| **Bundle Size**          | 58KB (gzip)       | 7KB          | 45KB       | 150KB+     |
+| **TypeScript**           | ✅ Full           | ⚠️ Types     | ⚠️ Types   | ✅ Full    |
+| **Active Development**   | ✅ Yes            | ⚠️ Slow      | ✅ Yes     | ✅ Yes     |
 
 ### **Unique Selling Points**
 
@@ -1323,6 +1383,7 @@ SmartBackground({
 ### **When to Use Smart Backgrounds**
 
 ✅ **Use Smart Backgrounds when:**
+
 - You want intelligent, adaptive backgrounds
 - Performance is critical (especially mobile)
 - Accessibility matters to you
@@ -1331,6 +1392,7 @@ SmartBackground({
 - You need therapeutic/wellness features
 
 ❌ **Don't use Smart Backgrounds when:**
+
 - You need just basic particles (use particles.js)
 - You have custom Three.js needs (use Three.js directly)
 - Bundle size is more important than features
@@ -1345,17 +1407,20 @@ SmartBackground({
 We welcome contributions! Here's how to get started:
 
 1. **Fork the repository**
+
    ```bash
    git clone https://github.com/your-username/smart-backgrounds.git
    cd smart-backgrounds
    ```
 
 2. **Install dependencies**
+
    ```bash
    pnpm install
    ```
 
 3. **Create a branch**
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -1366,6 +1431,7 @@ We welcome contributions! Here's how to get started:
    - Update documentation
 
 5. **Run tests**
+
    ```bash
    pnpm test
    pnpm lint
@@ -1460,6 +1526,7 @@ test('background renders without errors', async ({ page }) => {
 ### **Version 1.0 Goals (MVP)**
 
 #### **Core Features**
+
 - [x] Performance Intelligence
 - [x] User Behavior Response
 - [x] Context Awareness
@@ -1468,16 +1535,19 @@ test('background renders without errors', async ({ page }) => {
 - [ ] Audio Reactivity
 
 #### **Renderers**
+
 - [ ] Three.js renderer (5+ effects)
 - [ ] Canvas renderer (3+ effects)
 - [ ] CSS renderer (2+ effects)
 
 #### **Framework Support**
+
 - [ ] React bindings
 - [ ] Vue 3 bindings
 - [ ] Vanilla JS API
 
 #### **Documentation**
+
 - [ ] Complete API documentation
 - [ ] Interactive playground
 - [ ] 10+ examples
@@ -1565,6 +1635,7 @@ SOFTWARE.
 ### **Commercial Use**
 
 ✅ **Allowed:**
+
 - Use in commercial projects
 - Modify and redistribute
 - Private use
@@ -1576,9 +1647,7 @@ While not required, attribution is appreciated:
 
 ```html
 <!-- Powered by Smart Backgrounds -->
-<a href="https://github.com/smart-backgrounds/smart-backgrounds">
-  Smart Backgrounds
-</a>
+<a href="https://github.com/smart-backgrounds/smart-backgrounds"> Smart Backgrounds </a>
 ```
 
 ---
@@ -1617,6 +1686,7 @@ Tag your questions with `smart-backgrounds`
 ### **Commercial Support**
 
 Need priority support or custom development?
+
 - Email: support@smart-backgrounds.dev
 - Enterprise licensing available
 - Custom feature development
@@ -1640,7 +1710,7 @@ if (!SmartBackground.isWebGLSupported()) {
 // Try fallback renderer
 const bg = new SmartBackground({
   renderer: 'canvas', // Instead of 'three'
-  effect: 'gradient'
+  effect: 'gradient',
 });
 ```
 
@@ -1708,15 +1778,19 @@ import { ParticleSystem } from '@smart-backgrounds/three/effects/particles';
 ### **Frequently Asked Questions**
 
 #### **Q: Is it free to use?**
+
 A: Yes! MIT licensed, free for personal and commercial use.
 
 #### **Q: Can I use it with Next.js/Gatsby/Nuxt?**
+
 A: Yes! It works with any React/Vue framework. See SSR examples in docs.
 
 #### **Q: Does it work on mobile?**
+
 A: Yes! Optimized for mobile with adaptive quality and touch interactions.
 
 #### **Q: How do I disable on mobile?**
+
 ```javascript
 if (window.innerWidth < 768) {
   bg.destroy(); // Don't render on mobile
@@ -1724,35 +1798,44 @@ if (window.innerWidth < 768) {
 ```
 
 #### **Q: Can I use multiple backgrounds?**
+
 A: Yes! Create multiple instances with different containers.
 
 #### **Q: Does it affect SEO?**
+
 A: No! Backgrounds are purely visual and don't affect content indexing.
 
 #### **Q: Is it accessible?**
+
 A: Yes! Full WCAG compliance, respects user preferences, therapeutic modes available.
 
 #### **Q: Can I customize effects?**
+
 A: Yes! All effects are highly customizable, or create your own.
 
 #### **Q: Does it track users?**
+
 A: No! Privacy-first, no tracking, all processing is local.
 
 #### **Q: What about IE11 support?**
+
 A: Not supported. Requires modern browsers with WebGL 2.0.
 
 ### **Browser-Specific Issues**
 
 #### **Safari**
+
 - Some sensors APIs not available
 - Battery API not supported
 - Workaround: Disable sensor features on Safari
 
 #### **Firefox**
+
 - Some experimental features may be disabled
 - Enable in `about:config` if needed
 
 #### **Mobile Safari (iOS)**
+
 - Requires user interaction to start audio
 - Autoplay restrictions apply
 
@@ -1765,9 +1848,9 @@ const bg = new SmartBackground({
   features: {
     performance: {
       monitoring: true,
-      showStats: true // Shows stats.js panel
-    }
-  }
+      showStats: true, // Shows stats.js panel
+    },
+  },
 });
 
 // Listen to performance events
