@@ -80,100 +80,103 @@
         font-family: 'Courier New', monospace;
       }
 
-      /* Global Utility Demo Styles - Cascading Design */
-      .utility-demo section {
-        margin-bottom: 16px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      /* Utility Demo - Efficient Space Usage */
+      .utility-demo {
+        display: grid;
+        gap: 16px;
       }
 
-      .utility-demo section:last-child {
-        border: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
+      .utility-demo section {
+        display: grid;
+        grid-template-columns: 140px 1fr auto;
+        gap: 12px;
+        align-items: center;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .utility-demo header {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-        font-size: 0.9em;
+        flex-direction: column;
+        gap: 4px;
       }
 
-      .utility-demo code {
-        display: block;
-        padding: 10px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 4px;
-        font-family: 'Monaco', monospace;
+      .utility-demo header span {
         font-size: 0.85em;
-        margin: 8px 0;
-      }
-
-      .utility-demo button {
-        padding: 5px 14px;
-        background: rgba(102, 126, 234, 0.2);
-        border: 1px solid rgba(102, 126, 234, 0.4);
-        color: white;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.85em;
-        transition: all 0.15s;
-        margin-top: 8px;
-      }
-
-      .utility-demo button:hover {
-        background: rgba(102, 126, 234, 0.35);
-        transform: translateY(-1px);
-      }
-
-      .utility-demo small {
-        display: block;
-        margin-top: 6px;
-        opacity: 0.5;
-        font-size: 0.8em;
+        opacity: 0.7;
       }
 
       .utility-demo label {
         color: #667eea;
-        background: rgba(102, 126, 234, 0.1);
-        padding: 2px 6px;
-        border-radius: 3px;
+        background: rgba(102, 126, 234, 0.15);
+        padding: 3px 8px;
+        border-radius: 4px;
         font-family: monospace;
         font-size: 0.8em;
+        width: fit-content;
       }
 
-      .utility-demo [data-display] {
+      .utility-demo code {
+        padding: 8px 12px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        font-family: 'Monaco', monospace;
+        font-size: 0.85em;
+        flex: 1;
+      }
+
+      .utility-demo button {
+        padding: 6px 16px;
+        background: rgba(102, 126, 234, 0.25);
+        border: 1px solid rgba(102, 126, 234, 0.5);
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.85em;
+        font-weight: 500;
+        transition: all 0.15s;
+        white-space: nowrap;
+      }
+
+      .utility-demo button:hover {
+        background: rgba(102, 126, 234, 0.4);
+        transform: translateY(-1px);
+      }
+
+      .utility-demo [data-row] {
         display: flex;
-        gap: 10px;
+        gap: 12px;
         align-items: center;
-        margin: 8px 0;
+        flex: 1;
       }
 
       .utility-demo [data-swatch] {
-        width: 50px;
-        height: 30px;
-        border-radius: 4px;
-        border: 2px solid rgba(255, 255, 255, 0.2);
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       }
 
       .utility-demo [data-track] {
-        width: 100%;
-        height: 10px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
+        flex: 1;
+        height: 12px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
         position: relative;
-        margin: 8px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
       .utility-demo [data-track] > div {
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
         background: linear-gradient(135deg, #667eea, #764ba2);
         border-radius: 50%;
         position: absolute;
-        box-shadow: 0 2px 6px rgba(102, 126, 234, 0.6);
+        top: 0;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.8);
       }
 
       .instructions {
@@ -295,47 +298,49 @@
 
       <div class="spacer"></div>
 
-      <div class="info-panel utility-demo">
+      <div class="info-panel">
         <h2>🛠️ Core Utilities</h2>
         
-        <section>
-          <header>
-            <span>🧮 Vector Math</span>
-          </header>
-          <code id="vector-demo">Move mouse to test</code>
-          <small>Distance & angle from center</small>
-        </section>
-        
-        <section>
-          <header>
-            <span>🎨 Color Utils</span>
-            <label id="color-name">#667eea</label>
-          </header>
-          <div data-display>
-            <div data-swatch id="color-demo"></div>
+        <div class="utility-demo">
+          <section>
+            <header>
+              <span>🧮 Vector Math</span>
+            </header>
+            <code id="vector-demo">Move mouse to test</code>
+            <div></div>
+          </section>
+          
+          <section>
+            <header>
+              <span>🎨 Color Utils</span>
+              <label id="color-name">#667eea</label>
+            </header>
+            <div data-row>
+              <div data-swatch id="color-demo"></div>
+              <code id="color-text">HEX → RGB → HSL</code>
+            </div>
             <button onclick="window.testColorUtils()">Next Color</button>
-          </div>
-          <code id="color-text">HEX → RGB → HSL</code>
-        </section>
-        
-        <section>
-          <header>
-            <span>📊 Easing</span>
-            <label id="easing-name">easeInOutQuad</label>
-          </header>
-          <div data-track>
-            <div id="easing-demo"></div>
-          </div>
-          <button onclick="window.testEasing()">Animate</button>
-        </section>
-        
-        <section>
-          <header>
-            <span>💾 Storage</span>
-          </header>
-          <code id="storage-demo">Loading...</code>
-          <button onclick="window.testStorage()">Save Data</button>
-        </section>
+          </section>
+          
+          <section>
+            <header>
+              <span>📊 Easing</span>
+              <label id="easing-name">easeInOutQuad</label>
+            </header>
+            <div data-track>
+              <div id="easing-demo"></div>
+            </div>
+            <button onclick="window.testEasing()">Animate</button>
+          </section>
+          
+          <section>
+            <header>
+              <span>💾 Storage</span>
+            </header>
+            <code id="storage-demo">Loading...</code>
+            <button onclick="window.testStorage()">Save Data</button>
+          </section>
+        </div>
       </div>
 
       <div class="info-panel">
