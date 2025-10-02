@@ -60,24 +60,39 @@
         color: #667eea;
       }
 
-      .metric {
+      /* Global Metrics Design - Consistent with Utilities */
+      .metrics-grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .metrics-grid > div {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .metrics-grid span:first-child {
+        font-size: 0.85em;
+        opacity: 0.7;
         display: flex;
-        justify-content: space-between;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        align-items: center;
+        gap: 8px;
       }
 
-      .metric:last-child {
-        border-bottom: none;
-      }
-
-      .metric-label {
-        color: #aaa;
-      }
-
-      .metric-value {
+      .metrics-grid code {
+        padding: 6px 10px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        font-family: 'Monaco', monospace;
+        font-size: 0.85em;
         font-weight: 600;
-        font-family: 'Courier New', monospace;
+        text-align: right;
       }
 
       /* Utility Demo - Efficient Space Usage */
