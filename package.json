@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/michaelwybraniec/smart-backgrounds"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "author": "Michael Wybraniec",
   "workspaces": [
     "packages/*"
@@ -50,4 +50,3 @@
     "pnpm": ">=8.0.0"
   }
 }
-

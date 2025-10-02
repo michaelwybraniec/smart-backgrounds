@@ -4,7 +4,7 @@
 >
 > Featuring 29+ smart features including performance intelligence, user behavior response, and revolutionary capabilities
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
 [![pnpm](https://img.shields.io/badge/pnpm-8.15-orange)](https://pnpm.io/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -264,7 +264,9 @@ See [AWP.md](agentic-sdlc/AWP.md) for detailed collaboration guidelines.
 
 ## 📄 License
 
-MIT © Michael Wybraniec
+Apache License 2.0 © Michael Wybraniec
+
+See [LICENSE](LICENSE) file for details.
 
 **Made with ❤️ by [ONE-FRONT.COM](https://one-front.com) | [OVERVIBING.COM](https://overvibing.com)**
 
