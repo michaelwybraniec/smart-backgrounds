@@ -17,3 +17,6 @@ export type {
   EventBusInterface,
   EventHandler,
 } from './types.js';
+
+// Smart Features
+export * from './features/performance/index.js';

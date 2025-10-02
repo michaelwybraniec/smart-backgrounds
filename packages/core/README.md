@@ -7,6 +7,7 @@
 - **SmartBackground** - Main API facade with simple, clean interface
 - **FeatureManager** - Plugin system with dependency resolution
 - **EventBus** - Event-driven communication between features
+- **PerformanceFeature** - FPS monitoring, adaptive quality, GPU detection
 - **TypeScript** - Fully typed with strict mode
 - **Tree-shakeable** - Only bundle what you use
 - **Zero dependencies** - Lightweight and fast
@@ -20,16 +21,21 @@ pnpm add @smart-backgrounds/core
 ## 🎯 Quick Start
 
 ```typescript
-import { SmartBackground } from '@smart-backgrounds/core';
+import { SmartBackground, PerformanceFeature } from '@smart-backgrounds/core';
 
 const bg = new SmartBackground({
   renderer: 'three',
   effect: ParticleSystem,
-  features: {
-    performance: { enabled: true },
-    audio: { enabled: true },
-  },
 });
+
+// Register performance feature
+const perfFeature = new PerformanceFeature({
+  targetFPS: 60,
+  adaptiveQuality: true,
+  batteryAware: true,
+});
+
+bg.getFeatureManager().register(perfFeature);
 
 await bg.mount('#background');
 ```
